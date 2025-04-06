@@ -1,0 +1,24 @@
+.button {
+  border: 1px solid #fcfefe;
+  border-radius: 2px;
+  color: #fcfefe;
+  padding: 12px 20px;
+  width: 140px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  margin: 15px;
+}
+
+.button:hover {
+  border-color: #e3652b;
+  color: #e3652b;
+}
+
+.button.active {
+  border-color: #e3652b;
+  color: #e3652b;
+}

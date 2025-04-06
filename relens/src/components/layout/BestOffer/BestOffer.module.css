@@ -1,0 +1,167 @@
+/* Основные стили */
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --camera-white: #fbf9f8;
+  --orange: #ff6b00;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+.home-main-container {
+  background: linear-gradient(270deg, #322f2a 0%, #161616 100%);
+}
+
+.home-container {
+  background-image: url("/public/hasselblad-homepage.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vw;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--camera-white);
+  margin-bottom: 20px;
+  padding-top: 160px;
+}
+
+.h3text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(18px, 3vw, 32px);
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+/* Оранжевые блоки */
+.orange-blocks-container {
+  display: flex;
+  gap: clamp(10px, 2vw, 20px);
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+}
+
+.orange-block {
+  background-color: var(--orange);
+  padding-right: 15px;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Блок с предложением */
+.offer-container {
+  margin-top: 40px;
+}
+
+.offer-label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.offer-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.block-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  text-align: left;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.orange-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(10px, 1.5vw, 12px);
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #e3642e;
+}
+
+.offer-description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Кнопки */
+.buttons-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 15px 40px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.buy-now {
+  background-color: var(--orange);
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}

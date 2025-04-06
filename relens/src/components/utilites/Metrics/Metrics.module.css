@@ -1,0 +1,117 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --beige: #f5f5f0;
+  --primary: #ff6b00;
+  --camera-white: #fbf9f8;
+}
+
+.statsSection {
+  background: #191918;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 572px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.h2Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+}
+
+.sectionTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--beige);
+  text-align: left;
+}
+
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 80px;
+  width: 100%;
+}
+
+.statBlock {
+  width: 219px;
+  min-height: 131px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.statValue {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-align: center;
+}
+
+.statDescription {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: var(--camera-white);
+  margin: 0;
+  text-align: justify;
+}
+
+.learnMoreLink {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--beige);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.learnMoreLink:hover {
+  color: var(--primary);
+}
+
+.arrow {
+  color: var(--primary);
+  font-size: 1.2em;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .statsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .statBlock {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .sectionTitle {
+    margin-bottom: 40px;
+  }
+}

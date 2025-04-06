@@ -1,16 +1,16 @@
-import { Layout } from 'antd';
-import AppHeader from './components/layout/AppHeader';
-import AppSider from './components/layout/AppSider';
-import AppContent from './components/layout/AppContent';
+import { Layout } from "antd";
+import AppHeader from "./components/layout/AppHeader";
+import HomePage from "./components/layout/HomePage/HomePage";
+import BestOffer from "./components/layout/BestOffer/BestOffer";
+import Metrics from "./components/utilites/Metrics/Metrics";
 
 export default function App() {
   return (
     <Layout>
       <AppHeader />
-      <Layout>
-        <AppSider />
-        <AppContent />
-      </Layout>
+      <HomePage />
+      <BestOffer />
+      <Metrics />
     </Layout>
-  )
+  );
 }

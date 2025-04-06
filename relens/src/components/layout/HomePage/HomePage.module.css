@@ -1,0 +1,84 @@
+/* Основные стили */
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --camera-white: #fbf9f8;
+  --orange: #ff6b00;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+.home-container {
+  background: linear-gradient(270deg, #322f2a 0%, #161616 100%);
+  min-height: 368px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Стили текста */
+.main-title {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 96px;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fbf9f8;
+  margin-bottom: 40px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .home-container {
+    min-height: 268px;
+  }
+
+  .main-title {
+    font-size: 60px;
+  }
+
+  .subtitle {
+    font-size: 32px;
+  }
+
+  .orange-block {
+    padding: 20px 30px;
+  }
+
+  .orange-block h3,
+  .orange-block h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    min-height: 168px;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .orange-blocks-container {
+    flex-direction: column;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
