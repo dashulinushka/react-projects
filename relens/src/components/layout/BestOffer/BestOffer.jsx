@@ -9,7 +9,7 @@ export default function BestOffer() {
           className={styles["orange-blocks-container"]}
           style={{
             position: "absolute",
-            top: "25%",
+            top: "35%",
             left: "5%",
             "@media (max-width: 768px)": {
               top: "5%",
@@ -41,7 +41,7 @@ export default function BestOffer() {
           className={styles["orange-blocks-container"]}
           style={{
             position: "absolute",
-            top: "5%",
+            top: "10%",
             right: "5%",
           }}
         >
@@ -56,7 +56,7 @@ export default function BestOffer() {
         <div
           style={{
             position: "absolute",
-            top: "35%",
+            top: "45%",
             right: "15%",
           }}
         >

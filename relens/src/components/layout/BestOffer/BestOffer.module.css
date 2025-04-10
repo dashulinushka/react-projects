@@ -17,10 +17,11 @@ body {
 
 .home-container {
   background-image: url("/public/hasselblad-homepage.jpg");
-  background-position: top center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 100vw;
+  height: auto;
+  width: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -41,7 +42,7 @@ body {
   text-align: center;
   color: var(--camera-white);
   margin-bottom: 20px;
-  padding-top: 160px;
+  padding-top: 50%;
 }
 
 .h3text {

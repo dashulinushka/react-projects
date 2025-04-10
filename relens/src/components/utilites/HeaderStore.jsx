@@ -4,7 +4,6 @@ import Button from "./Button/Button";
 const headerStoreStyle = {
   display: "flex",
   alignItems: "center",
-  marginLeft: "auto",
 };
 
 const basketStyle = {

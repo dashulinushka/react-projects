@@ -1,0 +1,58 @@
+.moreSection {
+  background-image: url("/public/FilmYourMoment.png");
+  background-position: top center;
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  width: 100%;
+  min-height: 460px;
+  margin: 0 auto;
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2Container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+}
+
+.sectionTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--beige);
+  text-align: left;
+}
+
+.learnMoreLink {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--beige);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.learnMoreLink:hover {
+  color: var(--primary);
+}
+
+.arrow {
+  color: var(--primary);
+  font-size: 1.2em;
+}

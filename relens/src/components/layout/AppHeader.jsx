@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import HeaderNavbar from "../utilites/HeaderNavbar";
+import HeaderNavbar from "../utilites/HeaderNavbar/HeaderNavbar";
 import HeaderStore from "../utilites/HeaderStore";
 
 const headerStyle = {
@@ -22,7 +22,8 @@ export default function AppHeader() {
         style={{
           display: "flex",
           alignItems: "center",
-          padding: "0px 82px 0px 82px",
+          justifyContent: "space-between",
+          padding: "0px 42px 0px 42px",
         }}
       >
         <img src="/logo.png" alt="App Logo" style={logoStyle} />
