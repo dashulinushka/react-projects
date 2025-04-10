@@ -10,19 +10,16 @@ import Products from "./pages/Products";
 
 export default function App() {
   return (
-      <Layout>
-        <AppHeader />
-        <Routes>
-          <Route path="/shop" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/dest" element={<Contacts />} />
-          <Route path="/contacts" element={<Products />} />
-          <Route
-            path="/"
-            element={<Home />}
-          />
-        </Routes>
-        <AppFooter />
-      </Layout>
+    <Layout>
+      <AppHeader />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <AppFooter />
+    </Layout>
   );
 }

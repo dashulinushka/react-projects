@@ -1,3 +1,13 @@
+import ContactsInfo from "../components/layout/ContsctsInfo/ContactsInfo";
+import MyMap from "../components/layout/MyMap";
+import Submit from "../components/utilites/Submit/Submit";
+
 export default function Contacts() {
-  return <div>Shop Page Content</div>;
+  return (
+    <>
+    <ContactsInfo />
+    <MyMap/>
+    <Submit/>
+    </>
+  );
 }

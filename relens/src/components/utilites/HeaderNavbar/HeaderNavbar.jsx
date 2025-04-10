@@ -83,11 +83,11 @@ export default function HeaderNavbar() {
       mode="horizontal"
       style={menuStyle}
       selectedKeys={[
-        isActive("/shop")
+        isActive("/home")
           ? "1"
-          : isActive("/about")
+          : isActive("/products")
             ? "2"
-            : isActive("/dest")
+            : isActive("/about")
               ? "3"
               : isActive("/contacts")
                 ? "4"
@@ -98,32 +98,32 @@ export default function HeaderNavbar() {
     >
       <Menu.Item
         key="1"
-        style={getMenuItemStyle("1", "/shop")}
+        style={getMenuItemStyle("1", "/home")}
         onMouseEnter={() => setHoveredKey("1")}
         onMouseLeave={() => setHoveredKey(null)}
       >
-        <Link to="/shop" style={linkStyle}>
+        <Link to="/home" style={linkStyle}>
           Shop
         </Link>
       </Menu.Item>
       <Menu.Item
         key="2"
-        style={getMenuItemStyle("2", "/about")}
+        style={getMenuItemStyle("2", "/products")}
         onMouseEnter={() => setHoveredKey("2")}
         onMouseLeave={() => setHoveredKey(null)}
       >
-        <Link to="/about" style={linkStyle}>
-          About Us
+        <Link to="/products" style={linkStyle}>
+          Product
         </Link>
       </Menu.Item>
       <Menu.Item
         key="3"
-        style={getMenuItemStyle("3", "/dest")}
+        style={getMenuItemStyle("3", "/about")}
         onMouseEnter={() => setHoveredKey("3")}
         onMouseLeave={() => setHoveredKey(null)}
       >
-        <Link to="/dest" style={linkStyle}>
-          Destinations
+        <Link to="/about" style={linkStyle}>
+          About us
         </Link>
       </Menu.Item>
       <Menu.Item

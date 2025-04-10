@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #ff6b00;
+  --text-color: #fcfefe;
+  --light-gray: #f0f0f0;
+  --font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  background-color: #191918;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.subscribe-container {
+  background-color: #191918;
+  width: 60rem;
+  margin: 40px;
+  border: 1px solid #f0f0f0;
+  padding: 2rem;
+  font-family: var(--font-family);
+  text-align: center;
+  justify-content: center;
+}
+
+.subscribe-title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+}
+
+.subscribe-description {
+  font-size: clamp(8px, 1.8vw, 12px);
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  font-weight: 200;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+}
+
+.email-info {
+  text-align: left;
+}
+
+.email-title {
+  font-size: clamp(12px, 2vw, 18px);
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family);
+  line-height: 130%;
+  letter-spacing: 0.05em;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--light-gray);
+  margin: 2rem 0;
+}
+
+.subscribe-form {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  font-size: clamp(14px, 1.8vw, 16px);
+  background-color: #191918; /* Цвет фона */
+  color: #f0f0f0; /* Цвет текста */
+  border: 1px solid #444; /* Цвет рамки */
+  border-radius: 4px; /* Закругленные углы */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход */
+}
+
+.form-input:focus {
+  outline: none; /* Убираем стандартный обвод */
+  border-color: #898787; /* Цвет рамки при фокусе */
+  box-shadow: 0 0 5px rgba(240, 240, 240, 0.5); /* Тень при фокусе */
+}
+
+.form-input::placeholder {
+  color: #888; /* Цвет плейсхолдера */
+  opacity: 1; /* Убираем прозрачность */
+}
+
+.form-input.error {
+  border-color: #ff4d4d; /* Цвет рамки при ошибке */
+}
+
+.form-input.success {
+  border-color: #4caf50; /* Цвет рамки при успехе */
+}
+
+.subscribe-button {
+  width: 100%;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 12px;
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.subscribe-button:hover {
+  opacity: 0.9;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 480px) {
+  .subscribe-container {
+    padding: 1rem;
+  }
+
+  .divider {
+    margin: 1.5rem 0;
+  }
+}

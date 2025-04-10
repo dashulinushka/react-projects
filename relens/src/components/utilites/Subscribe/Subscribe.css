@@ -72,6 +72,37 @@
   width: 100%;
   padding: 12px;
   font-size: clamp(14px, 1.8vw, 16px);
+  background-color: #191918; /* Цвет фона */
+  color: #f0f0f0; /* Цвет текста */
+  border: 1px solid #444; /* Цвет рамки */
+  border-radius: 4px; /* Закругленные углы */
+  transition: border-color 1s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+.form-input:hover {
+  transition: border-color 1s ease, box-shadow 0.3s ease;
+  outline: none; /* Убираем стандартный обвод */
+  border-color: #898787; /* Цвет рамки при фокусе */
+  box-shadow: 0 0 5px rgba(240, 240, 240, 0.5); /* Тень при фокусе */
+}
+
+.form-input:focus {
+  outline: none; /* Убираем стандартный обвод */
+  border-color: #898787; /* Цвет рамки при фокусе */
+  box-shadow: 0 0 5px rgba(240, 240, 240, 0.5); /* Тень при фокусе */
+}
+
+.form-input::placeholder {
+  color: #888; /* Цвет плейсхолдера */
+  opacity: 1; /* Убираем прозрачность */
+}
+
+.form-input.error {
+  border-color: #ff4d4d; /* Цвет рамки при ошибке */
+}
+
+.form-input.success {
+  border-color: #4caf50; /* Цвет рамки при успехе */
 }
 
 .subscribe-button {

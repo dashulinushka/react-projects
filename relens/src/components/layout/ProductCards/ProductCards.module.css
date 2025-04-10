@@ -1,0 +1,233 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --camera-white: #fbf9f8;
+  --orange: #ff6b00;
+  --font-family: "Montserrat", sans-serif;
+  --beige: #f5f5f0;
+  --primary: #ff6b00;
+  --border-color: #e8e8e8;
+  --text-secondary: #767474;
+  --braun: #554b46;
+  --bg: #191918;
+}
+
+.product-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.main-image {
+  position: relative;
+  width: 75%;
+  aspect-ratio: 522 / 455;
+  background-color: #e3cfd2;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.small-images {
+  display: flex;
+  gap: 1rem;
+  width: 30%;
+  aspect-ratio: 214 / 186;
+  justify-content: center;
+}
+
+.small-images img {
+  width: 100%;
+  height: 100%;
+  background-color: #e3cfd2;
+  object-fit: cover;
+}
+
+.icon-overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon {
+  background: white;
+  border-radius: 55%;
+  padding: 0.4rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Адаптация всего product-card блока */
+.product-card {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: row;
+  padding: 60px;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 5px rgba(210, 180, 140, 0.3);
+}
+
+/* Правый блок тоже адаптивный */
+.product-right {
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+}
+
+.camera-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--beige);
+}
+
+.price {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--primary);
+  padding: 70px 170px 20px 0;
+}
+
+.brand-tag {
+  display: block;
+  border: 1px solid var(--beige);
+  background-color: rgba(98, 90, 90, 0.2);
+  width: 130px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.selected {
+  display: block;
+  border: 1px solid var(--beige);
+  background-color: rgba(98, 90, 90, 0.2);
+  width: 130px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.h3-features {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--beige);
+  margin-bottom: 10px;
+}
+
+.li-cards {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  color: var(--beige);
+}
+
+.lens-options {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 170px;
+}
+
+.lens-options span {
+  border: 1px solid var(--beige);
+  text-align: center;
+  border-radius: 2px;
+  padding: 12px 20px;
+  width: 140px;
+  height: 40px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--camera-white);
+}
+
+.lens-options .selected {
+  border: 1px solid #ff6b00;
+}
+
+/* ✅ Медиа-запросы для планшетов и телефонов */
+@media (max-width: 1024px) {
+  .product-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-image,
+  .small-images img {
+    max-width: 100%;
+  }
+
+  .small-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .small-images img {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .camera-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .price {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .lens-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .features ul {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+  }
+}

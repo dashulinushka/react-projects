@@ -1,0 +1,56 @@
+.advantages {
+  text-align: left;
+  background-color: #191918;
+  color: #fff; /* Цвет текста */
+  padding: 60px; /* Отступы */
+}
+
+.title {
+  font-family: var(--font-family);
+  margin-left: 40px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--camera-white);
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 35px 0;
+}
+
+.card {
+  width: 416px; 
+  height: 317px; 
+  border-radius: 10px;
+  color: #fff; 
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card p {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 32px;
+line-height: 130%;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: var(--beige);
+}
+
+.icon {
+  width: 100%; /* Ширина изображения */
+  height: auto; /* Высота изображения */
+  margin-bottom: 20px;
+}
+
+.span-colored {
+  color: var(--primary);
+  font-weight: 600;
+}
