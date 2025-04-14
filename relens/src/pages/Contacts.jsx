@@ -5,9 +5,9 @@ import Submit from "../components/utilites/Submit/Submit";
 export default function Contacts() {
   return (
     <>
-    <ContactsInfo />
-    <MyMap/>
-    <Submit/>
+      <ContactsInfo />
+      <MyMap />
+      <Submit />
     </>
   );
 }

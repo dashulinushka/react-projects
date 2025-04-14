@@ -25,6 +25,7 @@
   aspect-ratio: 522 / 455;
   background-color: #e3cfd2;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .main-image img {
@@ -39,6 +40,7 @@
   width: 30%;
   aspect-ratio: 214 / 186;
   justify-content: center;
+  cursor: pointer;
 }
 
 .small-images img {
@@ -119,6 +121,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--primary);
+  cursor: pointer;
 }
 
 .selected {
@@ -164,6 +167,7 @@
   justify-content: center;
   align-items: center;
   padding-right: 170px;
+  cursor: pointer;
 }
 
 .lens-options span {

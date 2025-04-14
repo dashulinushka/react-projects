@@ -60,6 +60,7 @@
   text-transform: uppercase;
   color: var(--header-dark);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .tag-selected {

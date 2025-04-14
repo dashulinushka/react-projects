@@ -9,6 +9,7 @@ const menuStyle = {
   height: "40px",
   borderRadius: "12px",
   padding: "12px 20px",
+  marginLeft: "60px",
   fontFamily: '"Montserrat", sans-serif',
   fontWeight: 600,
   fontSize: "12px",
@@ -31,7 +32,7 @@ const baseMenuItemStyle = {
   border: "none",
   display: "flex",
   alignItems: "center",
-  transition: "all 0.3s ease",
+  transition: "none",
 };
 
 // Стили для активного пункта
@@ -44,17 +45,12 @@ const activeMenuItemStyle = {
 const hoverMenuItemStyle = {
   ...baseMenuItemStyle,
   color: "#E3642E",
-  transform: "translateY(-1px)",
+  transform: "translateY(0px)",
 };
 
 // Стили для ссылок
 const linkStyle = {
   color: "inherit",
-  textDecoration: "none",
-  fontSize: "inherit",
-  fontFamily: "inherit",
-  fontWeight: "inherit",
-  textTransform: "inherit",
 };
 
 export default function HeaderNavbar() {

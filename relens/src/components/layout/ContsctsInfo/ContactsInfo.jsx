@@ -4,37 +4,87 @@ import classes from "./ContactsInfo.module.css";
 export default function ContactsInfo() {
   return (
     <section className={classes["advantages"]}>
-      <h1 className={classes["title"]}>contacts</h1>
+      <div className={classes["center"]}>
+        <h1 className={classes["title"]}>contacts</h1>
+        <p className={classes["about-p"]}>
+          Here you will find all the ways to contact us:
+          <br />
+        </p>
+        <p className={classes["about-p"]}>
+          - telephone numbers, <br />
+          - addresses, <br />- links to social networks.
+        </p>
+        <p className={classes["about-p"]}>
+          <br />
+          We are always{" "}
+          <span className={classes["span-colored"]}>in touch!</span>
+        </p>
+      </div>
+
       <div className={classes["cardContainer"]}>
         <div className={classes["card"]}>
-          <img
-            src="/fontisto_camera.svg"
-            alt="Advantage 1"
-            className={classes["icon"]}
-          />
-          <p>
-          <span className={classes["span-colored"]}>250 cameras</span> were sold in this year, marking a 20% increase compared to last year
-          </p>
+          <p className={`${classes["h4-span"]}`}>Oficess / shop</p>
+          <div className={classes["information"]}>
+            <p className={classes["span-bold"]}>
+              <span>address:</span>
+            </p>
+            <p>
+              224554, belarus, Minsk pr-t. nezalezhnosti 45 1-st floor, office
+              216{" "}
+            </p>
+          </div>
+
+          <div className={classes["information"]}>
+            <p className={classes["span-bold"]}>
+              working
+              <br /> hours:
+            </p>
+            <p>mon-fr 9.00 - 17.00</p>
+          </div>
         </div>
+
         <div className={classes["card"]}>
-          <img
-            src="/grommet-icons_user-expert.svg"
-            alt="Advantage 2"
-            className={classes["icon"]}
-          />
-          <p>
-          <span className={classes["span-colored"]}>OUR TEAM OF EXPERTS</span> CONDUCT A DETAILED EVALUATION OF EACH CAMERA TO ENSURE YOU GET A FAIR PRICE
-          </p>
+          <p className={`${classes["h4-span"]}`}>contact</p>
+          <div className={classes["information"]}>
+            <p className={classes["span-bold"]}>
+              <span>Phone-number:</span>
+            </p>
+            <p>
+              224554, belarus, Minsk pr-t. nezalezhnosti 45 1-st floor, office
+              216{" "}
+            </p>
+          </div>
+
+          <div className={classes["information"]}>
+            <p>
+              <span className={classes["span-bold"]}>email:</span>
+            </p>
+            <p className={classes["gap"]}>
+              <a
+                href="mailto:relens@gmail.com"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                relens@gmail.com
+              </a>
+            </p>
+          </div>
         </div>
+
         <div className={classes["card"]}>
-          <img
-            src="/solar_cup-star-linear.svg"
-            alt="Advantage 3"
-            className={classes["icon"]}
-          />
-          <p>
-          <span className={classes["span-colored"]}>4.8 out of 5</span> average rating, based on customer reviews.
-          </p>
+          <p className={`${classes["h4-span"]}`}>direction</p>
+          <div className={classes["information"]}>
+            <p>
+              <span className={classes["span-bold"]}>email:</span>
+            </p>
+            <p>
+              <a
+                href="mailto:pec@gmail.com"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                darya.babich@gmail.com
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </section>

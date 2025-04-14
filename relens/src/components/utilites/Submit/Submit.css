@@ -76,7 +76,9 @@
   color: #f0f0f0; /* Цвет текста */
   border: 1px solid #444; /* Цвет рамки */
   border-radius: 4px; /* Закругленные углы */
-  transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход */
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s; /* Плавный переход */
 }
 
 .form-input:focus {

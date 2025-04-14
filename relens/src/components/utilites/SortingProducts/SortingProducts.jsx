@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SortingProducts.css";
 
 export default function SortingProducts() {
+  const [selectedTag, setSelectedTag] = useState("All");
+  const tags = ["All", "Hasselblad", "Canon", "Fujifilm", "Sony", "Nikon"];
+
+  const handleTagClick = (tag) => {
+    setSelectedTag(tag);
+  };
+
   return (
     <section className="sort">
       <div className="products-wrapper">
         <div className="products-content">
           <h1 className="products-title">Products</h1>
           <div className="products-menu">
-            <span className="tag tag-selected">All</span>
-            <span className="tag tag-unselected">Hasselblad</span>
-            <span className="tag tag-unselected">Canon</span>
-            <span className="tag tag-unselected">Fujifilm</span>
-            <span className="tag tag-unselected">Sony</span>
-            <span className="tag tag-unselected">Nikon</span>
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className={`tag ${selectedTag === tag ? "tag-selected" : "tag-unselected"}`}
+                onClick={() => handleTagClick(tag)}
+              >
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
 

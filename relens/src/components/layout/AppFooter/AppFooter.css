@@ -9,7 +9,7 @@
 
 .footer {
   background-color: white;
-  padding: 80px;
+  padding: 60px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
@@ -20,7 +20,6 @@
   justify-content: space-between;
   align-items: center;
   border-top: 5px solid #1d1d1b;
-  border-bottom: 5px solid #007acc;
 }
 
 .footer-content {
@@ -58,9 +57,21 @@
 
 .info-icon {
   display: inline-block;
+  transition: filter 0.3s ease;
+}
+
+.info-icon:hover {
+  filter: invert(48%) sepia(96%) saturate(1189%) hue-rotate(330deg)
+    brightness(92%) contrast(91%);
 }
 
 .icon-footer {
   width: 40px;
   height: 40px;
+  transition: all 0.3s ease;
+}
+
+.icon-footer:hover {
+  width: 45px;
+  height: 45px;
 }

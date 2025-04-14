@@ -16,12 +16,10 @@ export default function Submit() {
     <section className="container">
       <div className="subscribe-container">
         <h1 className="subscribe-title">ANY QUESTIONS?</h1>
-        <p className="subscribe-description">
-        write to us
-        </p>
+        <p className="subscribe-description">write to us</p>
 
         <div className="email-info">
-          <h2 className="email-title">E_mail address</h2>
+          <h2 className="email-title">Email address</h2>
         </div>
 
         <Form
@@ -44,8 +42,8 @@ export default function Submit() {
           </Form.Item>
 
           <div className="email-info">
-          <h2 className="email-title">First name</h2>
-        </div>
+            <h2 className="email-title">First name</h2>
+          </div>
           <Form.Item
             name="email"
             rules={[

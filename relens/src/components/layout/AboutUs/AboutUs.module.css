@@ -39,6 +39,7 @@
 
 .about-card {
   display: flex; /* Используем flexbox для двухколоночного макета */
+  align-items: center;
   gap: 20px; /* Промежуток между колонками */
   margin: 0 80px;
 }
@@ -49,6 +50,7 @@
   justify-content: center; /* Горизонтальное центрирование */
   align-items: center; /* Вертикальное центрирование */
   background-color: lightgray; /* Пример фона для визуализации */
+  cursor: pointer;
 }
 
 .about-left img {
@@ -73,6 +75,6 @@
   line-height: 98%;
   letter-spacing: -0.01em;
   text-transform: lowercase;
-  color: var(--beige);
+  color: #0b0b0b;
   padding-bottom: 20px;
 }

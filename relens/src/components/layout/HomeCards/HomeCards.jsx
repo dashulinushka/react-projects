@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { Card } from "antd";
-import classes from "./HomeCards.module.css"; // Можно использовать `styles` или `classes` - это просто имя переменной
+import classes from "./HomeCards.module.css";
+import ModalHome from '../../utilites/ModalHome/ModalHome';
 
 const { Meta } = Card;
 
@@ -35,6 +37,18 @@ const cardsData = [
 ];
 
 export default function HomeCards() {
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleCardClick = (card) => {
+    setSelectedCard(card);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className={classes["cardsSection"]}>
       <div className={classes["h2Container"]}>
@@ -52,38 +66,43 @@ export default function HomeCards() {
 
       <div className={classes["cards-container"]}>
         {cardsData.map((card) => (
-          <Card
-            key={card.id}
-            hoverable
-            className={classes["custom-card"]}
-            cover={
-              <div className={classes["image-container"]}>
-                <img
-                  alt={card.title}
-                  src={card.imageUrl}
-                  className={classes["card-image"]}
-                />
-              </div>
-            }
+          <div 
+            key={card.id} 
+            onClick={() => handleCardClick(card)}
+            className={classes.cardWrapper}
           >
-            <Meta
-              title={
-                <span className={classes["card-title"]}>{card.title}</span>
+            <Card
+              hoverable
+              className={classes["custom-card"]}
+              cover={
+                <div className={classes["image-container"]} data-title={card.additionalText}>
+                  <img
+                    alt={card.title}
+                    src={card.imageUrl}
+                    className={classes["card-image"]}
+                  />
+                </div>
               }
-              description={
-                <>
-                  <p className={classes["card-description"]}>
-                    {card.description}
-                  </p>
-                  <p className={classes["card-additional"]}>
-                    {card.additionalText}
-                  </p>
-                </>
-              }
-            />
-          </Card>
+            >
+              <Meta
+                title={<span className={classes["card-title"]}>{card.title}</span>}
+                description={
+                  <>
+                    <p className={classes["card-description"]}>{card.description}</p>
+                    <p className={classes["card-additional"]}>{card.additionalText}</p>
+                  </>
+                }
+              />
+            </Card>
+          </div>
         ))}
       </div>
+
+      <ModalHome
+        open={isModalOpen}
+        onClose={handleCloseModal}
+        cardData={selectedCard}
+      />
     </section>
   );
 }

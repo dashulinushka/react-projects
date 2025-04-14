@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Input } from "antd";
+import { Checkbox } from "antd";
 import "./Subscribe.css";
 import Button from "../Button/Button";
 
@@ -22,7 +23,7 @@ export default function Subscribe() {
         </p>
 
         <div className="email-info">
-          <h2 className="email-title">E_mail address</h2>
+          <h2 className="email-title">Email address</h2>
         </div>
 
         <Form
@@ -42,6 +43,27 @@ export default function Subscribe() {
             ]}
           >
             <Input placeholder="Your email address" className="form-input" />
+          </Form.Item>
+
+          <Form.Item
+            name="agreement"
+            valuePropName="checked" // Это важно для чекбоксов
+            rules={[
+              {
+                validator: (_, value) =>
+                  value
+                    ? Promise.resolve()
+                    : Promise.reject(
+                        new Error(
+                          "You must agree to the processing of personal data",
+                        ),
+                      ),
+              },
+            ]}
+          >
+            <Checkbox className="checkbox">
+              I agree to the processing of my personal data
+            </Checkbox>
           </Form.Item>
 
           <Form.Item>

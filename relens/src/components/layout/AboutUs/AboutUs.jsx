@@ -7,7 +7,7 @@ export default function AboutUs() {
         <h1 className={classes["about-title"]}>About us</h1>
         <div className={classes["about-card"]}>
           <div className={classes["about-left"]}>
-            <img src="/hasselblad-homepage.jpg" alt="Description" />
+            <img src="/about-us.webp" alt="Description" />
           </div>
           <div className={classes["about-right"]}>
             <p className={classes["about-p"]}>

@@ -2,40 +2,47 @@ import React from "react";
 import classes from "./Partners.module.css";
 
 export default function Partners() {
+  // Массив данных о партнерах
+  const partners = [
+    {
+      name: "hasselblad",
+      image: "/hasselbladpartner.jpg",
+      url: "https://www.hasselblad.com/",
+    },
+    {
+      name: "canon",
+      image: "/canonpartner.jpg",
+      url: "https://www.canon.com/",
+    },
+    {
+      name: "sony",
+      image: "/sonypartner.jpg",
+      url: "https://www.sony.com/",
+    },
+  ];
+
   return (
     <section className={classes["advantages"]}>
       <h1 className={classes["title"]}>our Partners</h1>
       <div className={classes["cardContainer"]}>
-        <div className={classes["card"]}>
-          <img
-            src="/hasselbladpartner.jpg"
-            alt="Advantage 1"
-            className={classes["icon"]}
-          />
-          <p>
-          hasselblad
-          </p>
-        </div>
-        <div className={classes["card"]}>
-          <img
-            src="/canonpartner.jpg"
-            alt="Advantage 2"
-            className={classes["icon"]}
-          />
-          <p>
-          canon
-          </p>
-        </div>
-        <div className={classes["card"]}>
-          <img
-            src="/sonypartner.jpg"
-            alt="Advantage 3"
-            className={classes["icon"]}
-          />
-          <p>
-          sony
-          </p>
-        </div>
+        {partners.map((partner, index) => (
+          <a
+            key={index}
+            href={partner.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes["cardLink"]}
+          >
+            <div className={classes["card"]}>
+              <img
+                src={partner.image}
+                alt={`${partner.name} logo`}
+                className={classes["icon"]}
+              />
+              <p>{partner.name}</p>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   );

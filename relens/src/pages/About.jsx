@@ -7,7 +7,7 @@ export default function About() {
     <>
       <AboutUs />
       <Advantages />
-      <Partners/>
+      <Partners />
     </>
   );
 }

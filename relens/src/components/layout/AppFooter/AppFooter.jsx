@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./AppFooter.css"; // обычный CSS
+import "./AppFooter.css";
 
 const logoStyle = {
   height: "20px",
@@ -10,7 +10,7 @@ export default function AppFooter() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <Link to="/shop" className="footer-logo">
+        <Link to="/home" className="footer-logo">
           <img src="/RelensBlack.svg" alt="App Logo" style={logoStyle} />
         </Link>
         <div className="copyright">© Copyright 2025, All Rights Reserved</div>

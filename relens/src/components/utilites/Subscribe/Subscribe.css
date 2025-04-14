@@ -13,6 +13,13 @@
   justify-content: center;
 }
 
+.ant-input:hover, /*применяется и для страницы с контактами*/
+.ant-input:focus {
+  border-color: #d9d9d9;
+  box-shadow: none !important;
+  background-color: transparent;
+}
+
 .subscribe-container {
   background-color: #191918;
   width: 60rem;
@@ -37,6 +44,17 @@
   font-size: clamp(8px, 1.8vw, 12px);
   color: var(--text-color);
   margin-bottom: 2rem;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  font-weight: 200;
+  line-height: 98%;
+  letter-spacing: -0.01em;
+}
+
+.checkbox {
+  font-size: clamp(8px, 1.8vw, 12px);
+  color: var(--text-color);
+  margin-bottom: 0px;
   line-height: 1.5;
   font-family: var(--font-family);
   font-weight: 200;
@@ -76,11 +94,15 @@
   color: #f0f0f0; /* Цвет текста */
   border: 1px solid #444; /* Цвет рамки */
   border-radius: 4px; /* Закругленные углы */
-  transition: border-color 1s ease, box-shadow 0.3s ease; /* Плавный переход */
+  transition:
+    border-color 1s ease,
+    box-shadow 0.3s ease; /* Плавный переход */
 }
 
 .form-input:hover {
-  transition: border-color 1s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 1s ease,
+    box-shadow 0.3s ease;
   outline: none; /* Убираем стандартный обвод */
   border-color: #898787; /* Цвет рамки при фокусе */
   box-shadow: 0 0 5px rgba(240, 240, 240, 0.5); /* Тень при фокусе */
